@@ -1,0 +1,6 @@
+Source Address,Destination Address,Source Interface,Destination Interface,Service,Schedule,Action,NAT
+HOST-1,HOST-2,port1,port2,HTTP,always,accept,enable
+HOST-1,HOST-3,port1,port2,HTTP,always,accept,enable
+HOST-1,HOST-4,port1,port2,HTTP,always,accept,enable
+HOST-1,HOST-5,port1,port2,HTTP,always,accept,enable
+HOST-2,HOST-5,port1,port2,HTTP,always,accept,enable
