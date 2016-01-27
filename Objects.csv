@@ -1,0 +1,6 @@
+Object Name,Type,Subnet
+HOST-1,ipmask,10.0.0.1/32
+HOST-2,ipmask,10.0.0.2/32
+HOST-3,ipmask,10.0.0.3/32
+HOST-4,ipmask,10.0.0.4/32
+HOST-5,ipmask,10.0.0.5/32
