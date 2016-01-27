@@ -5,6 +5,7 @@ The script gets 2 csv files:
   2. Objects
 
 With the following format:
+
 Rules.csv:
   
     Source Address,Destination Address,Source Interface,Destination Interface,Service,Schedule,Action,NAT
