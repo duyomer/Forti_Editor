@@ -16,6 +16,8 @@ Objects.csv:
   
 Usage:
 
-    forti_cmd.py --file <RULES_FILE_PATH> <OBJECTS_FILE_PATH>
+    forti_cmd.py --file <RULES_FILE_PATH> <OBJECTS_FILE_PATH> <-a OR --add>
+    forti_cmd.py --file <RULES_FILE_PATH> <OBJECTS_FILE_PATH> <-d OR --delete> <RULE_ID>
     example:
-    forti_cmd.py --file /tmp/Rules.csv /tmp/Objects.csv
+      forti_cmd.py --file /tmp/Rules.csv /tmp/Objects.csv -a --> add all rules in csv rules file
+      forti_cmd.py --file /tmp/Rules.csv /tmp/Objects.csv -d 3 --> delete rule No. 3
