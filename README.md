@@ -1,10 +1,11 @@
 # Forti_Editor
 Python script for creating Fortigate Rules and Objects from a CSV file.
 
-Dependencies: Paramiko for ssh connection to machine.
-installation:
-    Ubuntu sudo apt-get install python-paramiko
-    CentOS yum install python-paramiko
+Dependencies: Python-Paramiko is needed for ssh connection and command sending to the machine.
+
+    installation:
+        Ubuntu sudo apt-get install python-paramiko
+        CentOS yum install python-paramiko
     
 The script gets 2 csv files:
   1. Rules
