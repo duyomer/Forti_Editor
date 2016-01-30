@@ -37,14 +37,18 @@ try:
   _arg2 = sys.argv[3]
   #_arg3: object type
   _arg3 = sys.argv[4]
-  #_arg4: object Address
-  _arg4 = sys.argv[5]
+
+  if _arg3 == "-d" or _arg3 == "--delete":
+     _arg4 = sys.argv[5]
+
 except IndexError:
   print """Usage:
-	forti_cmd.py --file <RULES_FILE_PATH> <OBJECTS_FILE_PATH>
+	forti_cmd.py --file <RULES_FILE_PATH> <OBJECTS_FILE_PATH> <-a OR --add>
+        forti_cmd.py --file <RULES_FILE_PATH> <OBJECTS_FILE_PATH> <-d OR --delete> <RULE_ID>
 	
 	example:
-		forti_cmd.py --file /tmp/Rules.csv /tmp/Objects.csv
+		forti_cmd.py --file /tmp/Rules.csv /tmp/Objects.csv -a --> add all rules in csv rules file
+		forti_cmd.py --file /tmp/Rules.csv /tmp/Objects.csv -d 3 --> delete rule No. 3
        	"""
   sys.exit()
 
@@ -182,13 +186,8 @@ def _runCsvRules(filepath):
 	  else:
 	      print "Rule not created"
 
-if opt1 == "--add":
-    _ssh_Connect(ip_addrs, username, password, 1)
-    print("%s  %s  %s" % (_arg2, _arg3, _arg4))
-    _addObject(_arg2, _arg3, _arg4)
-elif opt1 == "--file":
-    if int(_arg3) == 1:
-        for num in range(1,6):
-            _deleteRule(num)
-    elif int(_arg3) == 2:
+if opt1 == "--file":
+    if _arg3 == "-d" or _arg3 == "--delete":
+         _deleteRule(_arg4)
+    elif _arg3 == "-a" or _arg3 == "--add":
         _runCsvRules(_arg1)
